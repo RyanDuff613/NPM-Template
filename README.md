@@ -3,7 +3,7 @@
 ###### created by **Ryan Duff**
 ---
 ## Purpose
-###### I am template for a project that uses npm, webpack, eslint, babel and jest among others.See package.json for details
+###### I am template for a project that uses npm, webpack, eslint, babel and jest among others.See package.json for details. This template incorporates jQuery and Bootstrap.
 
 ---
 ## Setup Requirements
@@ -21,6 +21,8 @@
 - Babel
 - Jest
 - Eslint
+- jQuery
+- Bootstrap
 
 ---
 ### Known Bugs
