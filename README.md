@@ -11,8 +11,9 @@
  2. Navigate to project folder via Terminal.
  3. If you do not plan to use a `.env` file it the dependency `"dotenv-webpack": "^2.0.0"` should be removed from package.json.
  4. Update the `name` and `description` properties in `package.json` to reflect the new project.
- 5. From the command line run `npm install` to install all dependencies. 
- 6. `npm run start` to start a live server
+ 5. Remove unneccesary html, css and js content.
+ 6. From the command line run `npm install` to install all dependencies. 
+ 7. `npm run start` to start a live server.
  
 ---
 ### Tech Used
