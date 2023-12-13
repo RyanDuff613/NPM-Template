@@ -15,8 +15,7 @@ import './css/styles.css';
 window.onload = () => {
   const hiddenDiv = document.getElementById("hidden");
   const myButton = document.getElementById('myButton');
-  myButton.addEventListener("click", (event) => {
-    event.preventDefault();
+  myButton.addEventListener("click", () => {
     hiddenDiv.style.display = "block";
   });
 }
