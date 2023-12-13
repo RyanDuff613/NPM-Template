@@ -1,7 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const Dotenv = require('dotenv-webpack');
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -10,17 +10,17 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
   devtool: 'eval-source-map',
-  devServer: {               
-    contentBase: './dist'    
+  devServer: {
+    static: path.resolve(__dirname, 'dist')
   },
   plugins: [
+    new ESLintPlugin(),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Shape Tracker',
+      title: 'npm template',
       template: './src/index.html',
       inject: 'body'
-    }),
-    new Dotenv()
+    })
   ],
   module: {
     rules: [
@@ -30,11 +30,6 @@ module.exports = {
           'style-loader',
           'css-loader'
         ]
-      },
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: "eslint-loader"
       }
     ]
   }
